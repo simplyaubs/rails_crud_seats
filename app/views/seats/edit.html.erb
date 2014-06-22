@@ -8,14 +8,6 @@
     <%= f.text_field :location %>
   </p>
   <p>
-    <%= f.submit 'Add seat' %>
+    <%= f.submit 'Update seat' %>
   </p>
-<% end %>
-
-<%= @seats.each do |seat| %>
-<ul>
-  <li>
-    <%= link_to "#{seat.name}", seat_path(seat) %>, <%= seat.location %>
-  </li>
-</ul>
 <% end %>
