@@ -30,6 +30,12 @@ class SeatsController < ApplicationController
     redirect_to seats_path
   end
 
+  def destroy
+    @seat = Seat.find(params[:id]).delete
+
+    redirect_to seats_path
+  end
+
   private
   def seat_params
     params.require(:seat).permit(:name, :location)
