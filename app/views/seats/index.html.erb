@@ -1,0 +1,21 @@
+<%= form_for @seat do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.submit 'Add seat' %>
+  </p>
+<% end %>
+
+<%= @seats.each do |seat| %>
+<ul>
+  <li>
+    <%= seat.name %>, <%= seat.location %>
+  </li>
+</ul>
+<% end %>
